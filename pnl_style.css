@@ -1,0 +1,228 @@
+body{
+    background: linear-gradient(60deg,goldenrod,crimson,tomato,orange);
+    background-image: url('spa-img/IMG-1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: "Trebuchet MS", Tahoma, sans-serif;
+}
+.comp_name{
+    font-family: 'Times New Roman', Times, serif;
+    padding: 2%;
+    width: auto;
+    display: flex;
+    margin: auto;
+    position: fixed;
+    text-decoration: underline;
+    border-image: linear-gradient(to bottom,green,blue,black) 1;
+    text-shadow: 2px 2px 5px aqua, 1px 3px 3px red;
+    opacity: 85%;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: -180px;
+   
+}
+
+.container{
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
+    background-color: rgba(173, 31, 31, 0.5);
+    height: 70vh;
+}
+.comp_name h2 .l1{
+    position: fixed;
+    color:green;
+}
+.comp_name h2 .l2{
+    position: fixed;
+    color:blue;
+}
+.comp_name h2 .l3{
+    position: fixed;
+    color:black;
+}
+.comp_name h5{
+    position:;
+    text-decoration: none;
+}
+.details{
+    margin: auto;
+    min-width: 330px;
+    margin-top: 2%;
+    max-width: 400px;
+    width: 70%;
+}
+.details form{
+    margin-top: -20px;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(240, 248, 255, 0.3);
+    padding: 5%;
+    border: solid 5px;
+    border-image: linear-gradient(60deg,green,blue,red,goldenrod) 1;
+    box-shadow: 3px 3px linear-gradient(60deg,green,blue,red,goldenrod) 1;;
+}
+.details fieldset{
+    margin: auto;
+    width: 230px;
+    padding: 2%;
+    color: aliceblue;
+    border: transparent;
+}
+.details legend{
+    padding: 1%;
+    background-color: transparent;
+}
+.details img{
+    margin: auto;
+    width: 45px;
+    height: 5%;
+    object-fit: cover;
+}
+.details .btn1{
+    margin-left:5%;
+    width: 115px;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(91, 111, 91, 0.9);
+    cursor: pointer;
+    border: 3px solid silver;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    justify-self: center;
+    
+}
+.details .btn1:hover{
+    background-color: rgba(4, 48, 4, 0.5);
+    border: 3px solid skyblue;
+    box-shadow: 1px 2px 4px 3px skyblue;
+}
+
+.details a{
+    margin: 2% auto;
+    text-decoration: none;
+    color: blue;
+    text-transform: uppercase;
+    background-color: transparent;
+    padding: 2%;
+    margin-top: -54;
+    margin-left: 7%;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition:.5s;
+    transition-delay: .5s;
+    color: orange;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(135, 58, 58, 0.6);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
+}
+.details a:hover{
+    color: orange;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(135, 58, 58, 0.6);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-decoration: overline;
+    transition: ease 1s;
+    box-shadow: 1px 1px 2px 2px rgb(0,0,0);
+}
+.details input[type='text'] {
+    text-transform: capitalize;
+
+}
+.details input{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    text-decoration: dotted;
+    font-style:italic;
+    font-size: 16px;
+    height: 20px;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background: rgb(5,0,10,0.6);
+    color: dodgerblue;
+    width: 95%;
+    border: 3px solid silver;
+    padding: 3%;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-shadow: red;
+    outline: none;
+    text-align: center;
+}
+input[type='email'] {
+    text-transform: lowercase;
+}
+input:focus{
+    border: 3px solid rgba(252, 250, 251, 0.6);
+    box-shadow: none;
+    background-color: rgb(236, 234, 234,0.7);
+    color: dodgerblue;
+}
+fieldset option:focus{
+    border-radius: 20px;
+    color: orange;
+    background-clip: border-box;
+    background: white;
+}
+select option[value="male"] {
+    background: blueviolet;
+}
+select option[value="female"] {
+    background: blueviolet;
+}
+select option[value="trans"] {
+    background: blueviolet;
+}
+
+.details p a{
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: white;
+    //border-radius: 1%;
+}
+form h1{
+
+    background-color: blue;
+    align-content: center;
+    background-image: linear-gradient(60deg,green,tomato,rgb(47, 33, 22),crimson);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-decoration:underline;
+    text-align: center;
+}
+.nav{
+    margin-top: 160px;
+}
+.nav a{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    padding: 1%;
+}
+.nav a:hover{
+    color: rgb(22, 22, 140);
+    text-decoration: underline;
+    transform: translateX(1%)}
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+li{
+    min-width: 40px;
+    text-align: center;
+    padding: 4%;
+}

@@ -1,0 +1,59 @@
+body{
+  background: url('spa-img/massage1.jpg');
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+}
+.service{
+  background-color: powderblue;
+  padding: 2%;
+  border-radius: 3%;
+  border: solid rgb(75, 13, 13,0.6) 1px;
+}
+.service h1{
+  margin: auto;
+  width: 200px;
+  padding: .5%;
+  background: linear-gradient(90deg,blue,green,rgb(116, 87, 7));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.service{
+  margin: auto;
+  width: 80%;
+  color: white;
+  font-size: 18px;
+  
+}
+.barber shop{
+  border: solid;
+width: 300px;
+padding: 5%;
+  text-align: justify
+  }
+  
+.container {
+  display: grid;
+  width: 300px;
+  height: 220px;
+  border: 1px solid black;
+  padding: 10px;
+  margin: 2%;
+  cursor: pointer;
+  display:grid;
+  
+  
+  
+  
+  
+}
+
+.container:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.container:nth-child(even) {
+  background-color: gray;
+}
+ 
+
