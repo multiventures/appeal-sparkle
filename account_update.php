@@ -43,7 +43,7 @@
                 </fieldset>                
                 
                 <fieldset> <legend style="margin-left: 0;display: flex;object-fit: fill;padding: .3%;">
-                    <img src="access/padlock.png" style="width:20%;margin-left:-2%;border-radius: 50%;background: white;object-fit: contain" alt="SUBMIT"><label><h3 style="padding: 0;margin-left:0;margin-bottom:0;">Confirm Password:</h3>
+                    <img src="access/padlock.png" style="width:20%;margin-left:-2%;border-radius: 50%;background: white;object-fit: contain" alt="SUBMIT"><label><h3 style="padding: 0;margin-left:-5%;margin-bottom:0;">Confirm Password:</h3>
                     </label></legend>
                     <input type="password"name="confirm_pswd" required>
                 </fieldset>

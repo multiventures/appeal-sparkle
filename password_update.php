@@ -1,7 +1,7 @@
 <html>
     <body>
         <?php
-        $user_name = $_POST['user_name'];
+        //$user_name = $_POST['user_name'];
         $pswd = $_POST['pswd'];
         $pswd = base64_encode($pswd);
         $confirm_pswd = $_POST['confirm_pswd'];
@@ -11,22 +11,32 @@
         //$id = $_POST['id'];
 
         $con = mysqli_connect('localhost','root','','appeal sparkle spa');
-
+        $sql2 = "SELECT user_name FROM clients_1 WHERE client_id=$id";
+        $result = mysqli_query($con, $sql2);
+        
         // Check connection
         if (mysqli_connect_errno()) {
             echo "Failed to connect to MySQL: " . mysqli_connect_error();
             exit();
         }
-        if($pswd == $confirm_pswd) {
-            $sql = "update clients_1 set user_name='$user_name',pswd='$confirm_pswd' where client_id=$id";
-            if (mysqli_query($con, $sql)) {
-                echo "Updated successfully!";
-            } else {
-            echo "Error: " . $sql . "<br>" . mysqli_error($con);
-            }
-        }
-        else {
-            ?>
+        if (mysqli_num_rows($result) > 0) {
+
+            while($row = mysqli_fetch_assoc($result)) {
+                $uname = $row['user_name'];
+                if($pswd == $confirm_pswd) {
+                    $sql = "update clients_1 set pswd='$confirm_pswd' where client_id=$id";
+                    if (mysqli_query($con, $sql)) {
+                        echo "Updated successfully!<br>";
+                        echo "Redirecting to login...";
+                        ?>
+                        <meta http-equiv="refresh" content="3;url=login.php">
+                        <?php
+                    } else {
+                    echo "Error: " . $sql . "<br>" . mysqli_error($con);
+                    }
+                }
+                else {
+                    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,20 +71,22 @@
                 <fieldset> <legend style="display:flex;margin-left:0;">
                     <img src="access/account.jpeg" style="width:20%;margin-left:-2%;border-radius: 50%;background: transparent;" alt="SUBMIT"><label><h3 style="padding: 0;margin-left:-77%;margin-bottom:-2%;">Username:</h3>
                     </label></legend>
-                    <input type="text" max="20" name="user_name" style="height: 35px;" required>
+                    <button name="user_name" style="height: 35px;width: 120px;color: tomato;" value ="<?php $uname?>" disabled></button>
                 </fieldset>
 
                 <fieldset> <legend style="margin-left: 0;display: flex;object-fit: fill;padding: .3%;">
-                    <label><h3 style="padding: 0;margin-left:0;margin-bottom:0;">Input Password:</h3></label></legend>
-                    <input type="password" name="pswd" style="height: 35px; required>
+                <img src="access/padlock.png" style="width:20%;margin-left:-2%;border-radius: 50%;background: white;object-fit: contain" alt="SUBMIT"><label><h3 style="padding: 0;margin-left:-20%;margin-bottom:0;">Input Password:</h3>
+                </label> </legend>
+                    <input type="password" name="pswd" style="height: 35px;" required>
                 </fieldset>                
                 
                 <fieldset> <legend style="margin-left: 0;display: flex;object-fit: fill;padding: .3%;">
-                <label><h3 style="padding: 0;margin-left:0;margin-bottom:0;">Confirm Password:</h3></label></legend></label></legend>
-                    <input type="password" name="confirm_pswd" style="height: 35px; required>
+                <img src="access/padlock.png" style="width:20%;margin-left:-2%;border-radius: 50%;background: white;object-fit: contain" alt="SUBMIT"><label><h3 style="padding: 0;margin-left:-2%;margin-bottom:0;">Confirm Password:</h3>
+                </label> </legend>                 
+                <input type="password" name="confirm_pswd" style="height: 35px;" required>
                 </fieldset>
 
-                <input name="id" type="hidden"  value = "<?php echo $id ?>" >
+                <input name="id" type="hidden"  value = "<?php echo "$id" ?>" >
                 
                 <button type="submit" class="btn1"><img src="access/paper_plane.png"></button>
             </form>
@@ -84,7 +96,11 @@
 </html>
 <?php
         }
-
+    }
+}
+else{
+    echo"No username";
+}
         mysqli_close($con);
 
         ?>

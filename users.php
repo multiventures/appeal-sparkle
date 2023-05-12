@@ -27,7 +27,7 @@
                                 echo '<script>alert("A limited time has been set to help protect user data")</script>';
                                 ?>
                                 <div class="header">
-                                    <meta http-equiv="refresh" content="60;url=http://localhost/appeal%20sparkle/users.php">
+                                    <meta http-equiv="refresh" content="60;url=users.php">
                                     <script src="user.js"></script>
                                     <img src="spa-img/logo-1.png" alt="">
                                     <nav class="nav">
