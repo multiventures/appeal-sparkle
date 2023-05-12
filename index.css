@@ -259,6 +259,12 @@ span{
     color: #fff;
     background-color: #323946;
 }
+.spa_video{
+    background-color:aliceblue;
+    padding-top: 10%;
+    padding-left: 18%;
+    padding-right: 5%;
+}
 .footer > *{
     flex: 1 100%;
 }
