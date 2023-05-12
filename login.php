@@ -43,7 +43,7 @@
                 
                 <button type="submit" class="btn1"><img src="access/paper_plane.png"></button>
                 <a href="signup.php">Don't have an account?</a>
-                <p>Forgot password?</p>
+                <p><a href="account_update.php">Forgot password? </a> </p>
             </form>
         </div>
     </div>

@@ -47,6 +47,7 @@
                                         <th id="phone">Phone number</th>
                                         <th>Whatsapp number</th>
                                         <th>Gender</th>
+                                        <th>Delete Record</th>
                                     </tr>
                 
                                 <?php
@@ -64,6 +65,8 @@
                                                 <td id="gender">
                                                     <?php echo"M";?>
                                                 </td>
+                                                <td><a href="delete.php?id=<?php echo "$row[client_id]";?>">Delete</a></td>
+                                                <td><a href="account_update.php?id=<?php echo "$row[client_id]";?>">Update</a></td>
                                             </tr>
                                         </div>
                                         
@@ -79,6 +82,8 @@
                                             <td id="gender">
                                                 <?php echo"F";?>
                                             </td>
+                                            <td><a href="delete.php?id=<?php echo "$row[client_id]";?>">Delete</a></td>
+                                            <td><a href="account_update.php?id=<?php echo "$row[client_id]";?>">Update</a></td>
                                         </tr>
                                     <?php
                                     }
@@ -93,6 +98,8 @@
                                                 <td id="gender">
                                                     <?php echo"T";?>
                                                 </td>
+                                                <td><a href="delete.php?id=<?php echo "$row[client_id]";?>">Delete</a></td>
+                                                <td><a href="account_update.php?id=<?php echo "$row[client_id]";?>">Update</a></td>
                                         </tr>
                                     <?php
                                     }
