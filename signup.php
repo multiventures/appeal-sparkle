@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel ="stylesheet" href="pnl_style.css">
     <title>Appeal sparkle spa</title>
+    <meta name="theme-color" content="blueviolet">
 </head>
 <body>
 

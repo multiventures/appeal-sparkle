@@ -8,6 +8,7 @@
     <link rel ="stylesheet" href="pnl_style.css">
     <link rel="icon" href="spa-img/logo-1.png">
     <title>Login.php</title>
+    <meta name="theme-color" content="blueviolet">
 </head>
 <body>
     <div class="container">
