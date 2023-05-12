@@ -80,7 +80,6 @@ input[type='checkbox'] {
     width: 50px;
 }
 .check_box:hover{
-    //background: rgb(4, 126, 234);
     cursor: pointer;
 } 
 tr{
@@ -88,8 +87,7 @@ tr{
 }
 td:hover{
     cursor: none;
-    //color: white;
-    //background: rgba(183, 130, 230, 0.6);
+    background: rgba(3, 130, 230, 0.6);
     user-select: none;
 }
 th:hover{

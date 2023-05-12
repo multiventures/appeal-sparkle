@@ -14,7 +14,7 @@
                         echo"Failed to connect: ".mysqli_connect_error();
                     }
 
-                    $sql = "SELECT user_name, email, phone_number, whatsapp_number, gender FROM clients_1";
+                    $sql = "SELECT client_id,user_name, email, phone_number, whatsapp_number, gender FROM clients_1";
 
                     $result = mysqli_query($con, $sql);
                     $comp_pass = base64_encode("1234");
@@ -32,15 +32,16 @@
                                     <img src="spa-img/logo-1.png" alt="">
                                     <nav class="nav">
                                         <ul>
-                                            <li><a href="index.html"><img style="width: 40px; height: 40px;border-radius: 50%;background: blue;" src="access/OIP.jpeg" alt="HOME">HOME</a></li>
-                                            <li><a href="service.html"><img src="access/images.png" alt="SERVICES" style="width: 40px; height: 40px;border-radius: 50%;text-transform: bold;">SERVICES</a></li>
-                                            <li><a href="login.php"><img style="width: 40px; height: 40px;border-radius: 50%;background: blue;" src="access/account.png" alt="ACCOUNT">ACCOUNT</a></li>
+                                            <li><a href="index.html"><img style="width: 40px; height: 40px;border-radius: 50%;background: linear-gradient(20deg, green,orange,black);" src="access/5974907.png" alt="HOME">HOME</a></li>
+                                            <li><a href="service.html"><img src="access/internet.png" alt="SERVICES" style="background:linear-gradient(120deg, green,crimson,black);width: 40px; height: 40px;border-radius: 50%;font-weight: bold;">SERVICES</a></li>
+                                            <li><a href="login.php"><img style="width: 40px; height: 40px;border-radius: 50%;background: linear-gradient(20deg, green,blueviolet,black);" src="access/account-t.png" alt="ACCOUNT">ACCOUNT</a></li>
                                         </ul>
                                     </nav>
                                 </div>
                                 <table>
                                 <h2>Clients Table</h2>
                                     <tr>
+                                        <th>S/N</th>
                                         <th>Username</th>
                                         <th id="email">Email</th>
                                         <th id="phone">Phone number</th>
@@ -55,7 +56,8 @@
                                     if($gender == "male"){
                                     ?>
                                         <div class="male">
-                                            <tr style="color:white;">                                                <td  id="user_name"><?php echo"$row[user_name]"; ?></td>
+                                            <tr style="color: rgb(187,133,200);background: rgba(238, 248, 225, 0.8);">
+                                                <td><?php echo"$row[client_id]"; ?></td>                                                <td  id="user_name"><?php echo"$row[user_name]"; ?></td>
                                                 <td><?php echo"$row[email]"; ?></td>
                                                 <td><?php echo"$row[phone_number]"; ?></td>
                                                 <td  id="whatsapp"><?php echo"$row[whatsapp_number]"; ?></td>
@@ -69,7 +71,8 @@
                                     }
                                     elseif ($gender == "female"){
                                         ?>
-                                        <tr style="color: orange;">                                            <td  id="user_name"><?php echo"$row[user_name]"; ?></td>
+                                        <tr style="color: orange;background: rgb(255, 255, 255,0.8);">
+                                            <td><?php echo"$row[client_id]"; ?></td>                                           <td  id="user_name"><?php echo"$row[user_name]"; ?></td>
                                             <td><?php echo"$row[email]"; ?></td>
                                             <td><?php echo"$row[phone_number]"; ?></td>
                                             <td id="whatsapp"><?php echo"$row[whatsapp_number]"; ?></td>
@@ -81,7 +84,8 @@
                                     }
                                     else{
                                         ?>
-                                        <tr style="color:rgb(102, 2, 102, 0.9);">
+                                        <tr style="color:tomato;background: rgb(255, 255, 255,0.8);">
+                                                <td><?php echo"$row[client_id]"; ?></td>
                                                <td  id="user_name"><?php echo"$row[user_name]"; ?></td>
                                                 <td><?php echo"$row[email]"; ?></td>
                                                 <td><?php echo"$row[phone_number]"; ?></td>
@@ -100,10 +104,10 @@
                                 <img src="spa-img/logo-1.png" alt="">
                                 <nav class="nav">
                                     <ul style="margin-top: -70px;margin-left: 70px;">
-                                        <li><a href="index.html">HOME</a></li>
-                                        <li><a href="service.html">SERVICES</a></li>
-                                        <li><a href="login.php">ACCOUNT</a></li>
-                                    </ul>
+                                        <li><a href="index.html"><img style="width: 40px; height: 40px;border-radius: 50%;background: linear-gradient(20deg, green,orange,black);" src="access/5974907.png" alt="HOME">HOME</a></li>
+                                        <li><a href="service.html"><img src="access/internet.png" alt="SERVICES" style="background:linear-gradient(120deg, green,crimson,black);width: 40px; height: 40px;border-radius: 50%;text-transform: bold;">SERVICES</a></li>
+                                        <li><a href="login.php"><img style="width: 40px; height: 40px;border-radius: 50%;background: linear-gradient(20deg, green,blueviolet,black);" src="access/account-t.png" alt="ACCOUNT">ACCOUNT</a></li>
+                                   </ul>
                                 </nav>
                                 <form action="users.php" method="POST">
                                     <div style="width:215px;margin: auto;background: url('spa-img/IMG-2.jpg'); padding: 3%; border-radius: 3%;margin-top: 40px;">

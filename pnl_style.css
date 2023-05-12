@@ -24,12 +24,6 @@ body{
    
 }
 
-.container{
-    background-attachment: fixed;
-    background-size: 100vw 100vh;
-    background-color: rgba(173, 31, 31, 0.5);
-    height: 70vh;
-}
 .comp_name h2 .l1{
     position: fixed;
     color:green;
@@ -56,7 +50,7 @@ body{
 .details form{
     margin-top: -20px;
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(240, 248, 255, 0.3);
+    background-color: rgba(238, 248, 225, 0.8);
     padding: 5%;
     border: solid 5px;
     border-image: linear-gradient(60deg,green,blue,red,goldenrod) 1;
@@ -66,7 +60,7 @@ body{
     margin: auto;
     width: 230px;
     padding: 2%;
-    color: aliceblue;
+    color: crimson;
     border: transparent;
 }
 .details legend{
@@ -215,7 +209,8 @@ form h1{
 .nav a:hover{
     color: rgb(22, 22, 140);
     text-decoration: underline;
-    transform: translateX(1%)}
+    font-weight: bold;
+    transform: ScaleX(1%)}
 ul{
     list-style: none;
     display: flex;
@@ -225,4 +220,7 @@ li{
     min-width: 40px;
     text-align: center;
     padding: 4%;
+}
+.nav a img{
+    background: white;
 }

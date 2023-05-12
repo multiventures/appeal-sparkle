@@ -22,6 +22,7 @@
                 <li><a href="index.html"><img style="width: 40px; height: 40px;border-radius: 50%;background: linear-gradient(20deg, green,orange,black);" src="access/5974907.png" alt="HOME">HOME</a></li>
                 <li><a href="service.html"><img src="access/internet.png" alt="SERVICES" style="background:linear-gradient(120deg, green,crimson,black);width: 40px; height: 40px;border-radius: 50%;text-transform: bold;">SERVICES</a></li>
                 <li><a href="login.php"><img style="width: 40px; height: 40px;border-radius: 50%;background: linear-gradient(20deg, green,blueviolet,black);" src="access/account-t.png" alt="ACCOUNT">ACCOUNT</a></li>
+                <li><a href="users.php"><img style="width: 40px; height: 40px;border-radius: 50%;" src="access/users.png" alt="ACCOUNT">Users</a></li>
             </ul>
         </nav>
         <div class="details">
@@ -33,9 +34,9 @@
                     <input type="text" max="20" name="first_name" required>
                 </fieldset>
                 
-                <fieldset> <legend style="margin-left: 30%">
-                    <label><h3 style="padding-left: 10%;margin-left:-35%;padding-right: 10%;margin-top:-2%;margin-bottom:-2%;">Password:</h3></label>
-                    </legend>
+                <fieldset> <legend style="margin-left: 0;display: flex;object-fit: fill;padding: .3%;">
+                    <img src="access/padlock.png" style="width:20%;margin-left:-2%;border-radius: 50%;background: white;object-fit: contain" alt="SUBMIT"><label><h3 style="padding: 0;margin-left:-77%;margin-bottom:-2%;">Password:</h3>
+                    </label></legend>
                     <input type="password"name="pswd" required>
                 </fieldset>
                 
