@@ -199,18 +199,22 @@ form h1{
 }
 .nav{
     margin-top: 160px;
+    z-index: 11;
 }
 .nav a{
     list-style-type: none;
     text-decoration: none;
     color: white;
     padding: 1%;
+    z-index: 1;
 }
 .nav a:hover{
     color: rgb(22, 22, 140);
     text-decoration: underline;
     font-weight: bold;
-    transform: ScaleX(1%)}
+    transform: ScaleX(1%);
+    z-index: 1;
+}
 ul{
     list-style: none;
     display: flex;

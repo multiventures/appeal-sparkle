@@ -59,15 +59,16 @@
                                     ?>
                                         <div class="male">
                                             <tr style="color: rgb(187,133,200);background: rgba(238, 248, 225, 0.8);">
-                                                <td><?php echo"$row[client_id]"; ?></td>                                                <td  id="user_name"><?php echo"$row[user_name]"; ?></td>
+                                                <td><?php echo"$row[client_id]"; ?></td>
+                                                <td  id="user_name"><?php echo"$row[user_name]"; ?></td>
                                                 <td><?php echo"$row[email]"; ?></td>
                                                 <td><?php echo"$row[phone_number]"; ?></td>
                                                 <td  id="whatsapp"><?php echo"$row[whatsapp_number]"; ?></td>
                                                 <td id="gender">
                                                     <?php echo"M";?>
                                                 </td>
-                                                <td><a href="delete.php?id=<?php echo "$row[client_id]";?>">Delete</a></td>
-                                                <td><a href="account_update.php?id=<?php echo "$row[client_id]";?>">Update</a></td>
+                                                <td style="cursor: pointer;"><a style="color:red;" href="delete.php?id=<?php echo "$row[client_id]";?>">Delete</a></td>
+                                                <td style="cursor: pointer;"><a style="color: black;" href="account_update.php?id=<?php echo "$row[client_id]";?>">Update</a></td>
                                             </tr>
                                         </div>
                                         
@@ -76,15 +77,16 @@
                                     elseif ($gender == "female"){
                                         ?>
                                         <tr style="color: orange;background: rgb(255, 255, 255,0.8);">
-                                            <td><?php echo"$row[client_id]"; ?></td>                                           <td  id="user_name"><?php echo"$row[user_name]"; ?></td>
+                                            <td><?php echo"$row[client_id]"; ?></td>
+                                            <td  id="user_name"><?php echo"$row[user_name]"; ?></td>
                                             <td><?php echo"$row[email]"; ?></td>
                                             <td><?php echo"$row[phone_number]"; ?></td>
                                             <td id="whatsapp"><?php echo"$row[whatsapp_number]"; ?></td>
                                             <td id="gender">
                                                 <?php echo"F";?>
                                             </td>
-                                            <td><a href="delete.php?id=<?php echo "$row[client_id]";?>">Delete</a></td>
-                                            <td><a href="account_update.php?id=<?php echo "$row[client_id]";?>">Update</a></td>
+                                            <td style="cursor: pointer;"><a style="color:red;" href="delete.php?id=<?php echo "$row[client_id]";?>">Delete</a></td>
+                                            <td style="cursor: pointer;"><a style="color: black;" href="account_update.php?id=<?php echo "$row[client_id]";?>">Update</a></td>
                                         </tr>
                                     <?php
                                     }
@@ -99,8 +101,8 @@
                                                 <td id="gender">
                                                     <?php echo"T";?>
                                                 </td>
-                                                <td><a href="delete.php?id=<?php echo "$row[client_id]";?>">Delete</a></td>
-                                                <td><a href="account_update.php?id=<?php echo "$row[client_id]";?>">Update</a></td>
+                                                <td style="cursor: pointer;"><a style="color:red;" href="delete.php?id=<?php echo "$row[client_id]";?>">Delete</a></td>
+                                                <td style="cursor: pointer;"><a style="color: black;" href="account_update.php?id=<?php echo "$row[client_id]";?>">Update</a></td>
                                         </tr>
                                     <?php
                                     }
