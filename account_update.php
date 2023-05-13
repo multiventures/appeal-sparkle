@@ -11,7 +11,22 @@
     <meta name="theme-color" content="blueviolet">
 </head>
 <body>
-    <?php $id = $_GET["id"];?>
+    <?php
+        $id = $_GET["id"];
+        $con = mysqli_connect('localhost','root','','appeal sparkle spa');
+        $sql2 = "SELECT user_name FROM clients_1 WHERE client_id=$id";
+        $result = mysqli_query($con, $sql2);
+        
+        // Check connection
+        if (mysqli_connect_errno()) {
+            echo "Failed to connect to MySQL: " . mysqli_connect_error();
+            exit();
+        }
+        if (mysqli_num_rows($result) > 0) {
+
+            while($row = mysqli_fetch_assoc($result)) {
+                $uname = $row['user_name'];
+    ?>
     <div class="container">
         <div class="comp_name">
             <img style=""src="spa-img/logo-1.png" width="200"> 
@@ -33,7 +48,7 @@
                 <fieldset> <legend style="display:flex;margin-left:0;">
                     <img src="access/account.jpeg" style="width:20%;margin-left:-2%;border-radius: 50%;background: transparent;" alt="SUBMIT"><label><h3 style="padding: 0;margin-left:-77%;margin-bottom:-2%;">Username:</h3>
                     </label></legend>
-                    <input type="text" max="20" name="user_name" required>
+                    <input name="user_name" style="color: tomato;" value ="<?php echo "$uname"?>" required disabled>
                 </fieldset>
 
                 <fieldset> <legend style="margin-left: 0;display: flex;object-fit: fill;padding: .3%;">
@@ -54,5 +69,8 @@
             </form>
         </div>
     </div>
+    <?php
+}
+        }?>
 </body>
 </html>

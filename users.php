@@ -48,6 +48,7 @@
                                         <th>Whatsapp number</th>
                                         <th>Gender</th>
                                         <th>Delete Record</th>
+                                        <th>Change Password</th>
                                     </tr>
                 
                                 <?php
