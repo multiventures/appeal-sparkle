@@ -1,3 +1,28 @@
+<?php
+    $uname =  isset($_POST['uname']) ? $_POST['uname']: 'Default';
+    $pass =  isset($_POST['pass']) ? $_POST['pass']: 'default';
+
+    $pass = base64_encode($pass);
+
+    $con = mysqli_connect('localhost','root','','appeal sparkle spa');
+    $sql = "SELECT user_name,pswd FROM clients_1 WHERE user_name=$uname";
+    $result = mysqli_query($con, $sql);
+
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+        exit();
+    }
+    if (mysqli_num_rows($result) > 0) {
+
+        while($row = mysqli_fetch_assoc($result)) {
+            $name = $row['user_name'];
+            $paswd = $row['pswd'];
+            echo "$name";
+            echo "$paswd";
+        }
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -32,18 +57,18 @@
                 <fieldset> <legend style="display:flex;margin-left:0;">
                     <img src="access/account.jpeg" style="width:20%;margin-left:-2%;border-radius: 50%;background: transparent;" alt="SUBMIT"><label><h3 style="padding: 0;margin-left:-77%;margin-bottom:-2%;">Username:</h3>
                     </label></legend>
-                    <input type="text" max="20" name="first_name" required>
+                    <input type="text" max="20" name="uname" required>
                 </fieldset>
                 
                 <fieldset> <legend style="margin-left: 0;display: flex;object-fit: fill;padding: .3%;">
                     <img src="access/padlock.png" style="width:20%;margin-left:-2%;border-radius: 50%;background: white;object-fit: contain" alt="SUBMIT"><label><h3 style="padding: 0;margin-left:-77%;margin-bottom:-2%;">Password:</h3>
                     </label></legend>
-                    <input type="password"name="pswd" required>
+                    <input type="password"name="pass" required>
                 </fieldset>
                 
                 <button type="submit" class="btn1"><img src="access/paper_plane.png"></button>
                 <a href="signup.php">Don't have an account?</a>
-                <p><a href="account_update.php">Forgot password? </a> </p>
+                <p><a href="#">Forgot password? </a> </p>
             </form>
         </div>
     </div>
