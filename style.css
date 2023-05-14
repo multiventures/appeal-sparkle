@@ -1,0 +1,88 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  transition: 0.5s linear;
+}
+.title{
+  color: lightgreen;
+  font-family: 'Raleway';
+  font: size 9.5em;
+  width: 1200px;
+  margin: 10px auto;
+  text-align: center; 
+}
+.services{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  grid-template-columns:auto auto auto ;
+  
+  
+}
+.card{
+  height: 250px;
+  width: 300px;
+  padding: 20px 35px; 
+  margin: 15px;
+  border-radius: 10px;
+  justify-content: center;
+  color: black;
+  height: 350px;
+  
+
+  
+  flex-direction: column;
+   background: #dff9fb;
+  cursor: pointer;
+
+
+}
+
+body{
+   background-image:url(salon7.jpg);
+}
+.card h1{
+  font-family: 'Raleway';
+  text-align: center;
+  color: #22a6b3;
+  
+}
+.content{
+  font-size: 17px;
+   padding: 1%;
+
+}
+.services .card:hover {
+  background-color: lightpink;
+  opacity: 0.8;
+}  
+.btn{
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  margin-top: 20px;
+  padding: 8px 15px;
+  background: #333;
+  border-radius: 5px;
+  display: inline-block;
+  text-decoration: none;
+  
+}
+.btn:hover{
+  letter-spacing: 1px;
+
+}
+.btn:hover{
+  transform: scale(1.1);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+
+}
+@media (max-width:770px) {
+.card{
+  padding: 20px;
+}
+}
