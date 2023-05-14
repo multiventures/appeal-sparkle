@@ -3,7 +3,8 @@
                 <head>
                     <title>Users </title>
                     <link rel="stylesheet" href="users.css">
-                    <meta name="theme-color" content="blueviolet">                    
+                    <meta name="theme-color" content="blueviolet">
+                    <link rel="icon" href="spa-img/logo-1.png">                  
                 </head>
                 <body class="container">
 

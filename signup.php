@@ -9,6 +9,7 @@
     <link rel ="stylesheet" href="pnl_style.css">
     <title>Appeal sparkle spa</title>
     <meta name="theme-color" content="blueviolet">
+    <link rel="icon" href="spa-img/logo-1.png">
 </head>
 <body>
 
