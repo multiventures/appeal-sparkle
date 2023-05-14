@@ -9,6 +9,7 @@
     <link rel="icon" href="spa-img/logo-1.png">
     <title>Account Update</title>
     <meta name="theme-color" content="blueviolet">
+    <link rel="icon" href="spa-img/logo-1.png">
 </head>
 <body>
     <?php
