@@ -1,5 +1,4 @@
 <html>
-    <body>
         <?php
         //$user_name = $_POST['user_name'];
         $pswd = $_POST['pswd'];
@@ -20,6 +19,26 @@
             exit();
         }
         if (mysqli_num_rows($result) > 0) {
+            ?>
+            <head>
+                            <meta charset="UTF-8">
+                            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            <link rel ="stylesheet" href="pnl_style.css">
+                            <link rel="icon" href="spa-img/logo-1.png">
+                            <title>Account Update</title>
+                            <meta name="theme-color" content="blueviolet">
+                        </head>
+                        <body>
+                            <div class="container">
+                                <div class="comp_name">
+                                    <img style=""src="spa-img/logo-1.png" width="200"> 
+                                    <h2><span class="l1">APPEAL</span><br>
+                                    <span class="l2">SPARKLE</span><br>
+                                    <span class="l3">SPA</span></h2>
+                                </div>
+                                <nav class="nav">
+            <?php
 
             while($row = mysqli_fetch_assoc($result)) {
                 $uname = $row['user_name'];
